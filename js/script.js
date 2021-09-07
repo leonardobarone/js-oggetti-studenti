@@ -31,7 +31,7 @@ console.log("« FINE PRIMO ESERCIZIO »");
 
 // Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
 for (var i = 0; i < studenti.length; i++) {
-    document.getElementById("lista").innerHTML += `<li class="lista-stile">${studenti[i].nome} ${studenti[i]["cognome"]}`;
+    document.getElementById("lista").innerHTML += `<li class="lista-stile">${studenti[i].nome} ${studenti[i]["cognome"]}</li>`;
 }
 // Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
 document.getElementById("iscrivi").addEventListener("click",
@@ -43,7 +43,14 @@ document.getElementById("iscrivi").addEventListener("click",
     };
         studenti.push(nuovoStudente);
         alert("hai inserito un nuovo studente");
-        document.getElementById("lista").innerHTML += `<li class="lista-stile">${nuovoStudente.nome} ${nuovoStudente["cognome"]}`
+        document.getElementById("lista").innerHTML += `<li class="lista-stile" id="elimina2">${nuovoStudente.nome} ${nuovoStudente["cognome"]}
+        <button class="btn btn-danger">Elimina</button></li>`
+
+                        document.querySelector("li#elimina2").addEventListener("click",
+                        function(event) {
+                            event.target.outerHTML = "";
+                        }
+);
     }
 );
 
@@ -57,4 +64,7 @@ document.getElementById("svuota").addEventListener("click",
         alert("hai svuotato i campi");
     }
 );
+
+// bottone elimina
+
 
