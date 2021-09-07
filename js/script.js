@@ -31,14 +31,20 @@ console.log("« FINE PRIMO ESERCIZIO »");
 
 // Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
 for (var i = 0; i < studenti.length; i++) {
-    document.getElementById("lista").innerHTML += `<li class="lista-stile">${studenti[i].nome} ${studenti[i]["cognome"]}`
+    document.getElementById("lista").innerHTML += `<li class="lista-stile">${studenti[i].nome} ${studenti[i]["cognome"]}`;
 }
 // Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
-// var nuovoStudente = {
-//     "nome" : prompt("inserisci nome nuovo studente"),
-//     "cognome" : prompt("inserisci cognome nuovo studente"),
-//     "eta" : parseInt(prompt("inserisci eta nuovo studente")),
-// };
+document.getElementById("iscrivi").addEventListener("click",
+    function() {
+        var nuovoStudente = {
+        "nome" : document.getElementById("nome").value,
+        "cognome" : document.getElementById("cognome").value,
+        "eta" :  parseInt(document.getElementById("eta").value),
+    };
+        studenti.push(nuovoStudente);
+        alert("hai inserito un nuovo studente");
+        document.getElementById("lista").innerHTML += `<li class="lista-stile">${nuovoStudente.nome} ${nuovoStudente["cognome"]}`
+    }
+);
 
-// studenti.push(nuovoStudente);
-console.log(studenti);
+
