@@ -13,17 +13,17 @@ var studenti = [
     {
         "nome" : "Leonardo",
         "cognome" : "Barone",
-        "eta" : "28"
+        "eta" : 28
     },
     {
         "nome" : "Gianluca",
         "cognome" : "Capozzi",
-        "eta" : "46"
+        "eta" : 46
     },
     {
         "nome" : "Gerry",
         "cognome" : "Scotti",
-        "eta" : "65"
+        "eta" : 65
     }
 ];
 
@@ -39,3 +39,6 @@ var nuovoStudente = {
     "cognome" : prompt("inserisci cognome nuovo studente"),
     "eta" : parseInt(prompt("inserisci eta nuovo studente")),
 };
+
+studenti.push(nuovoStudente);
+console.log(studenti);
