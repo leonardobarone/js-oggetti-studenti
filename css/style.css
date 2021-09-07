@@ -5,6 +5,35 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: aqua;
+.hero {
+    background-image: url("https://us.123rf.com/450wm/maya23k/maya23k1901/maya23k190100345/115065130-materiale-scolastico-su-sfondo-di-legno-blu.jpg?ver=6");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+h1 {
+    margin: 20px 0px;
+    font-size: 54px;
+    color: white;
+    text-shadow: 0px 2px 2px black;
+}
+
+label {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    text-shadow: 0px 2px 2px black;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.bottoni {
+    text-align: center;
+    margin: 30px 0px;
+}
+.btn {
+    margin: 5px;
 }
