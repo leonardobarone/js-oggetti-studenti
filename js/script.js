@@ -47,4 +47,14 @@ document.getElementById("iscrivi").addEventListener("click",
     }
 );
 
+// PULSANTE SVUOTA CAMPI
+document.getElementById("svuota").addEventListener("click",
+    function() {
+        document.getElementById("nome").value ="";
+        document.getElementById("cognome").value ="";
+        document.getElementById("eta").value ="";
+
+        alert("hai svuotato i campi");
+    }
+);
 
