@@ -10,10 +10,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 1000px;
 }
 
-h1 {
+h1, h2 {
     margin: 20px 0px;
     font-size: 54px;
     color: white;
@@ -36,4 +36,10 @@ label {
 }
 .btn {
     margin: 5px;
+}
+
+.lista-stile {
+    list-style: none;
+    font-weight: bold;
+    font-size: 20px;
 }
